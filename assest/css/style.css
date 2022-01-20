@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+
+/**/
+
+ :root {
+    --main: #4d6684;
+    --basic: #f9fafc;
+    --border: #eaedf4;
+    --basic2: #eff2f7;
+}
+
+body {
+    background-color: var(--basic);
+}
+
+
+/*nav*/
+
+.home-links {
+    display: none;
+    margin: 0px 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--basic2);
+}
+
+.home-links>div {
+    width: 11%;
+    background: var(--basic);
+    border: 1px solid var(--border);
+    border-left: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.login-icon-button {
+    border-left: 1px solid var(--border) !important;
+    border-right: none !important;
+}
+
+.login-icon-button,
+.privincy {
+    flex: 2;
+    font-size: 15px;
+}
+
+.home-links>div:active,
+.home-links>div span:active {
+    color: var(--basic);
+    background-color: var(--main);
+}
+
+.yer,
+.eng {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.eng {
+    text-transform: capitalize;
+}
+
+
+/****************************header********************************/
+
+header {
+    background-color: var(--basic);
+    margin: 0;
+    padding: 9px;
+}
+
+header>.upper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.shopping-cart {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    background: var(--basic2);
+    color: var(--main);
+    cursor: pointer;
+}
+
+.shopping-cart svg {
+    fill: var(--main);
+}
+
+.shopping-cart svg:active {
+    fill: var(--basic);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    height: 43px;
+    border-radius: 30px;
+    width: 40%;
+    padding: 16px;
+    background-color: var(--basic2);
+    justify-content: space-around;
+}
+
+.logo svg {
+    width: 100px;
+}
+
+.search i {
+    font-size: 20px;
+    color: #ccc;
+}
+
+.search input[type='search'] {
+    height: 27px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    padding-right: 3px;
+    color: var(--main);
+}
+
+.menu-bar {
+    display: grid;
+    font-size: 12px;
+    color: var(--main);
+}
+
+
+/****************************media query********************************/
+
+@media (min-width: 600px) {
+    .search input[type='search'] {
+        font-size: 18px;
+        padding-right: 49px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .home-links {
+        display: none;
+    }
+    header {
+        margin: 10px 38px;
+        background-color: transparent;
+        padding: 0;
+    }
+    .search {
+        width: 69%;
+        justify-content: space-between;
+    }
+    .search input[type='search'] {
+        font-size: 18px;
+        padding-right: 49px;
+    }
+    .logo svg {
+        width: 100px;
+    }
+    .upper-footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .down-footer {
+        padding: 35px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .home-links {
+        display: flex;
+    }
+    .menu-bar {
+        display: none;
+    }
+    .search {
+        width: 69%;
+    }
+    .logo svg {
+        width: 140px;
+    }
+    .upper-footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .down-footer {
+        padding: 35px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    .home-links {
+        display: flex;
+    }
+    .menu-bar {
+        display: none;
+    }
+    .search {
+        width: 69%;
+    }
+    .logo svg {
+        width: 160px;
+    }
+    .upper-footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .down-footer {
+        padding: 35px;
+        grid-template-columns: 1fr 1fr;
+    }
+}

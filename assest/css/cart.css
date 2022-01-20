@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #4d6684;
+    --basic: #f9fafc;
+    --border: #eaedf4;
+    --basic2: #eff2f7;
+}
+
+body {
+    direction: rtl;
+}
+
+.cart-part3 {
+    padding: 14px 18px;
+    width: max(32vw, 400px);
+    height: 55vh;
+    background-color: var(--basic);
+    filter: drop-shadow(2px 1px 2px black);
+    border-radius: 5px;
+    border: 1px solid var(--basic2);
+}
+
+.notice {
+    background-color: #f7f3d1b0;
+    padding: 12px;
+    border-radius: 3px;
+    border-right: 4px solid #ffeb3b;
+    color: var(--main);
+}
+
+.notice span {
+    font-weight: 900;
+}
+
+.notice a {
+    text-decoration: none;
+    color: blue;
+}

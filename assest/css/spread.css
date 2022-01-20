@@ -1,0 +1,132 @@
+:root {
+    --circlce-default: #ccc;
+    --circle-active: #442644;
+}
+
+body {
+    display: grid;
+    justify-items: center;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 62%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 7vh;
+    position: relative;
+    background-color: #442644a1;
+    z-index: -2;
+    height: 10vh;
+}
+
+.progress::before {
+    content: '';
+    background-color: var(--circlce-default);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+}
+
+.progress {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progess-line {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    background-color: var(--circle-active);
+    width: 0%;
+    height: 2px;
+    z-index: -1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-btn {
+    width: 62%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4vh;
+    position: relative;
+}
+
+.circle {
+    border: 3px solid var(--circlce-default);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.active {
+    background-color: var(--circle-active);
+    border-color: var(--circle-active);
+    color: white
+}
+
+.btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #442644;
+    width: 116px;
+    color: white;
+    padding: 9px;
+    border-radius: 3px;
+}
+
+
+/**********************************************/
+
+label {
+    color: white;
+}
+
+input {
+    text-align: center;
+    height: 43px;
+    width: 100%;
+    margin: 12px 0px;
+}
+
+label,
+input {
+    display: block;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+.form-of-buy {
+    padding: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 38, 68);
+    width: 62%;
+}
+
+.sp2,
+.sp3,
+.sp4 {
+    visibility: hidden;
+    position: absolute;
+    top: 22vh;
+    background-color: white;
+    color: black;
+}
