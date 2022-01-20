@@ -20,9 +20,9 @@ function myFunction() {
 /****************************************** */
 let coun = 0;
 document.getElementById('add-to-cart').addEventListener('click', () => {
-
-    sessionStorage.setItem('cart-count', ++coun);
-    document.getElementById('cart-coun').innerHTML = ++coun;
+    coun = coun + 1;
+    sessionStorage.setItem('cart-count', coun);
+    document.getElementById('cart-coun').innerHTML = coun;
 
 });
 
